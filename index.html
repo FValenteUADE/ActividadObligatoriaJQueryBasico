@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio con Bootstrap y JQuery</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body class="text-center p-5 bg-light">
+
+    <h1 id="titulo" class="display-4 text-primary mb-5">¡Mirá la siguiente imagen!</h1>
+
+    <div class="mb-4">
+        <button id="btn-ocultar" class="btn btn-danger mx-2">Ocultar Imagen</button>
+        <button id="btn-mostrar" class="btn btn-success mx-2">Mostrar Imagen</button>
+    </div>
+
+    <img id="imagen" src="resources/logo uade.png" alt="Ejemplo de imagen" class="img-fluid rounded shadow">
+
+    <script>
+        $(document).ready(function(){
+            $("#btn-ocultar").click(function(){
+                $("#imagen").hide();
+                $("#titulo").text("¡No tenemos ninguna imagen!");
+            });
+
+            $("#btn-mostrar").click(function(){
+                $("#imagen").show();
+                $("#titulo").text("¡Mirá la siguiente imagen!");
+            });
+        });
+    </script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
